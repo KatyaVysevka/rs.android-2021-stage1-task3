@@ -14,11 +14,6 @@ class Combinator {
         return null
     }
 
-    fun factorial(num: Int): Int {
-        var answer = 1
-        for (i in 1..num) {
-            answer *= i
-        }
-        return answer
-    }
+    fun factorial(n: Int): Int = if (n < 2) 1 else n * factorial(n -1)
+
 }
